@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        android:gravity="top"
+        layout="@layout/tool_bar"></include>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:id="@+id/srcText"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:hint="Where are you?"
+        android:textColorHint="@color/hint"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dstText"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:hint="Where do you want to go?"
+        android:textColorHint="@color/hint"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/frameLayout">
+
+        <!--<TextView
+            android:id="@+id/TextAct1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="This is the first Activity, Say Hi"
+            android:textSize="25dp" />
+-->
+        <ImageButton
+            android:layout_margin="15dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/search_m"
+            android:background="@drawable/circle"
+            android:id="@+id/imageButton"
+            android:layout_gravity="center|top" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/Go"
+        android:onClick="go"
+        android:layout_gravity="center"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="GO!"
+        android:ellipsize="middle"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:clickable="true" />
+
+</LinearLayout>
